@@ -9,20 +9,26 @@ import java.time.LocalDate;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Curso curso1= new Curso("curso java",
-                "descrição curso java",
-                8);
 
-        Curso curso2= new Curso("curso js",
-                "descrição curso js",
-                4);
+        Curso curso1= new Curso();
+        curso1.setTitulo("curso java");
+        curso1.setDescriçao("descrição curso java");
+        curso1.setCargaHoraria(8);
 
-        Mentoria mentoria = new Mentoria("mentoria de java",
-                "descrição mentoria de java",
-                LocalDate.now());
+        Curso curso2= new Curso();
+        curso2.setTitulo("curso js");
+        curso2.setDescriçao("descrição curso js");
+        curso2.setCargaHoraria(4);
 
-        System.out.println(mentoria);
+        Mentoria mentoria = new Mentoria();
+        mentoria.setTitulo("mentoria de java");
+        mentoria.setDescriçao("descrição mentoria de java");
+        mentoria.setData( LocalDate.now());
+
+
+
         System.out.println(curso1);
         System.out.println(curso2);
+        System.out.println(mentoria);
     }
 }
